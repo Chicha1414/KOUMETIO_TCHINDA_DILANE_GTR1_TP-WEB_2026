@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widith"device-widith,initial- scale="1.0" >
+    <title>Accueil- Mon mini- site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+</haed>
+<body>
+    <div class="page">
+   <header>
+    <h1>Mon mini-site web</h1>
+    </header> 
+   <nav>
+    <a href="index.html">Acceuil</a>
+    <a href="presentation.html">presentation</a>
+    <a href="contact.html">contact</a>
+   </nav>
+   <div class="container">
+    <main>
+        <section class="carte">
+        <h2>compteur interactif</h2>
+        <P> ce texte montre comment javascript peut conserver et modifier une valeur.
+        <p id="compteur">0</p>    
+        <button onchange="incrementer()">augmenter</button>
+        <button onclick="decrementer()">diminuer</button>
+        <button onclick="remettrecompteurAzero">Remettre a zero</button>
+        </section>
+        <button onclick="changerTEXTE()">change le texte</button>
+        <button onclick="changercouleur()">change la couleur</button>
+        <button onclick="changeStyle()">change le style complet</button>
+        <button onclick="masquertexte()">masquer</button>
+        <button onclick="affichertexte()">afficher</button>
+        <button onclick="reintialisertexte()">reintialiser</button>
+        </section>
+
+        <h2>Bienvenue</h2>
+        <p> site a ete ameliore avec flexbox pour une meilleure organisation.</p>
+    </main>
+    <aside>
+        <h2>Ajoute dynamique dans une liste</h2> 
+        <p>cette zone permet d'ajouter un equipement reseau dans une liste.</p>
+        <label for="equipement">nom de l'equipement</label>
+        <input type="text" id="equipement" placeholder="Exemple:routeur R1">
+        <button onclick="ajouterequipement()">Ajouter</button>
+        <button onclick="viderliste()">vider la liste</button>
+        <ul id="listeequipement"></ul>
+        <label for="domaineUtilisateur">choisissez votre domaine d'interet</label>
+        <select id="domaineUtilisateur">
+            <option value="">--choisir un domaine--</option>
+           <option value=" reseaux informatique">reseaux informatique</option>
+           <option value="cybersecurite">cybersecurite</option>
+           <option value="developpement web">developpement web</option>
+           <option value="administration system">administration system</option>
+           </select>
+           <button onclick="afficherMessage()">afficher le message</button>
+           <p id="messageliste"></p>
+        </section> 
+        <button onclick="affichermessage()">afficher le message</button>
+        <p id="messageResultat"></p>
+    </section>
+
+   </div>
+   <footer>
+    <p>2026-Mon mini-site</p> 
+    </footer>
+</body>         
+   <h2>information personnelles</h2>
+   <p>Nom</p>
+   </div>
+   <p>ce mini-site a ete cree dans le cadre du cours de TP progrqmation web.</p>
+   <p>il permet de decouvrir la creation de plusieurs pages HTML reliees entre elles.</p> 
+   <h2>objectif du mini-site</h2>
+<p>j'apprends la programation web parce qu'elle me permettra de creer des interets uitles pour les services reseaux et les applications d'entreprise.</p>
+
+<h2>pqges disponible</h2>
+<ul>
+    <li>La page Acceuil presente le conteste general du mini-site.</li>
+    <li>La page presentation contient les informations personnelles de l'etudiant.</li>
+    <li>page contact contient les informations de contact de l'etudiant.</li>
+    </ul>
+    <p class="highlight">ce teste est important.</p>
+    <script>
+        function affichermessage(){
+            let nom= document.getElementByld("nom utilisateur").value;// recupere le nom saisi par l'utilisateur
+            let domaine= document.getElementById("domaineUtilisateur")//recupere le domaine choisi la liste deroulante
+            let message="";// cree une variable vide qui contient le message final
+            let valeurcompteur=0;
+            function incrementer(){
+                valeurcompteur= valeurcompteur+1;
+                getElementById("compteur").textContent = valeurcompteur;
+            }
+            function decrementer(){
+                valeurcompteur=valeurcompteur-1;
+                getElementById("compteur").textContent= valeurcompteur;
+            }
+            function remettrelecompteurAzero(){
+                valeurcompteur=0;
+                getElementById("compteur").textContent=valeurcompteur;
+            }
+            if( nom===""&& domaine===""){
+                message=" veuillez saisir votre nom et choisir un document d'interet.";//prepare un message si aucune information n'est fournie
+            } else if (nom==="")
+             message=" veuillez saisir votre nom.";
+        } elseif(domaine==="");{
+            message=" veuillez choisir un domaine d'interet.";
+        } elseif;{
+        message="Bienvenue"+ nom+".votre domaine dinteret est:"+domaine+"."
+        }
+        document.getElementByIdElementById("messageResultat").textContent=message;
+        </script>
+        {
+            getElementById("texteDynamique").textContent= "le texte a ete modifier grace au dom.";
+        }
+    </script>
+    {
+        getElementById("texteDynamique").textContent="le texte a ete modifier grace au dom.";
+    }
+    function changercouleur(){
+        getElementById("texteDynamique").style.color= "red";
+    }
+    function changeStyle() {
+        let element= <document. getelementbyid("texteDynamique");
+        element.style.color = "white";
+        element.style.backgroundcolor ="#0b3d91";
+        element.style.fontsize ="20px";
+        element.style.fontweigth ="bold";
+        element.style.padding="12px";
+        element.style.borderradius ="8px";
+    }
+    function masquertexte()(
+        document.getelementbyid("texteDynamique").style.display= "none";
+    )
+    function affichertexte()(
+        document.getelementbyid("texteDynamique").style.display= "block";
+    )
+    function reinitialiser(){
+        let element=document.getElementById(texteDynamique);
+    element.textecontent="ce texte initial sera modifier avec javascript.";
+    element.style.backgroundcolor="transparent";
+    element.style.fontsize="16px";
+    element.style.fontweight="0";
+    element.style.padding="0";
+    element.style.borderRadius = "0";
+    element.style.display = "block";
+    }
+</script>
+</body>
+</html>
